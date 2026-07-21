@@ -1,33 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ai-model-rating: compare</title>
-  <meta name="description" content="Shell page for comparing AI models.">
+  <title>Compare LLM Models - ai-model-rating</title>
+  <meta name="description" content="Side-by-side comparison of two LLM models with benchmark, pricing, and context details.">
   <link rel="canonical" href="https://ai-model-rating.bossincrypto.dev/compare.html">
+  <meta property="og:title" content="Compare LLM Models - ai-model-rating">
+  <meta property="og:description" content="Side-by-side comparison of two LLM models with benchmark, pricing, and context details.">
+  <meta property="og:url" content="https://ai-model-rating.bossincrypto.dev/compare.html">
+  <meta property="og:image" content="https://ai-model-rating.bossincrypto.dev/favicon.svg">
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <nav aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/compare.html" aria-current="page">Compare</a>
-      <a href="/trends.html">Trends</a>
-      <a href="/sources.html">Sources</a>
+      <a class="brand" href="/">LLM Ratings</a>
+      <ul>
+        <li><a href="/">Ratings</a></li>
+        <li><a href="/compare.html" aria-current="page">Compare</a></li>
+        <li><a href="/trends.html">Trends</a></li>
+        <li><a href="/sources.html">Sources</a></li>
+      </ul>
     </nav>
   </header>
-  <main>
-    <h1>Compare</h1>
-    <p>Compare model details here.</p>
+  <main class="page-main">
+    <h1>Compare Models</h1>
+    <p>Pick two models from the ratings table and review their details side by side.</p>
     <noscript>
-      <p>JavaScript appears to be disabled. This view is still available.</p>
+      <div class="noscript-content">
+        <p>JavaScript appears to be disabled. Choose two models below and open their pages directly.</p>
+        <ul>
+          <li><a href="/">Open Ratings</a></li>
+          <li><a href="/trends.html">Review Trends</a></li>
+          <li><a href="/sources.html">Review Sources</a></li>
+        </ul>
+      </div>
     </noscript>
   </main>
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 ai-model-rating</p>
+    <nav aria-label="Footer navigation">
+      <a href="/">Ratings</a>
+      <a href="/compare.html">Compare</a>
+      <a href="/trends.html">Trends</a>
+      <a href="/sources.html">Sources</a>
+      <a href="/LICENSE">License</a>
+    </nav>
   </footer>
   <script src="assets/js/main.js" defer></script>
 </body>

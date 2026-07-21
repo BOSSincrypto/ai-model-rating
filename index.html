@@ -1,33 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ai-model-rating</title>
-  <meta name="description" content="Lightweight static shell for the AI model rating site.">
+  <title>LLM Model Ratings</title>
+  <meta name="description" content="Unified ratings for available LLMs across public benchmarks.">
   <link rel="canonical" href="https://ai-model-rating.bossincrypto.dev/">
+  <meta property="og:title" content="LLM Model Ratings">
+  <meta property="og:description" content="Unified ratings for available LLMs across public benchmarks.">
+  <meta property="og:url" content="https://ai-model-rating.bossincrypto.dev/">
+  <meta property="og:image" content="https://ai-model-rating.bossincrypto.dev/favicon.svg">
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <nav aria-label="Main navigation">
-      <a href="/">Home</a>
+      <a class="brand" href="/">LLM Ratings</a>
+      <ul>
+        <li><a href="/" aria-current="page">Ratings</a></li>
+        <li><a href="/compare.html">Compare</a></li>
+        <li><a href="/trends.html">Trends</a></li>
+        <li><a href="/sources.html">Sources</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1>Model Ratings</h1>
+    <p>Explore leading models ranked across public benchmarks.</p>
+    <section class="results-area" aria-labelledby="results-heading">
+      <h2 id="results-heading">Results</h2>
+      <p class="results-count" aria-live="polite">Demo content will be added in m2.</p>
+      <div class="table-wrapper">
+        <table aria-label="Model ratings">
+          <thead>
+            <tr>
+              <th class="sortable" aria-sort="ascending" tabindex="0" role="button">Rank</th>
+              <th class="sortable" aria-sort="none" tabindex="0" role="button">Model</th>
+              <th class="sortable" aria-sort="none" tabindex="0" role="button">Provider</th>
+              <th class="sortable" aria-sort="none" tabindex="0" role="button">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Placeholder</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <noscript>
+        <div class="noscript-content">
+          <p>JavaScript appears to be disabled. This page is still accessible.</p>
+          <ul>
+            <li><a href="/compare.html">Compare two models</a></li>
+            <li><a href="/trends.html">Review benchmark trends</a></li>
+            <li><a href="/sources.html">View source methodology</a></li>
+          </ul>
+        </div>
+      </noscript>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2026 ai-model-rating</p>
+    <nav aria-label="Footer navigation">
+      <a href="/">Ratings</a>
       <a href="/compare.html">Compare</a>
       <a href="/trends.html">Trends</a>
       <a href="/sources.html">Sources</a>
+      <a href="/LICENSE">License</a>
     </nav>
-  </header>
-  <main>
-    <h1>Home</h1>
-    <p>Welcome to the AI model rating shell.</p>
-    <noscript>
-      <p>JavaScript appears to be disabled. This page is still accessible.</p>
-    </noscript>
-  </main>
-  <footer>
-    <p>&copy; 2026 ai-model-rating</p>
   </footer>
   <script src="assets/js/main.js" defer></script>
 </body>

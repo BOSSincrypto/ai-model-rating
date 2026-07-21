@@ -1,33 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ai-model-rating: sources</title>
-  <meta name="description" content="Shell listing sources for AI model ratings.">
+  <title>Sources - ai-model-rating</title>
+  <meta name="description" content="Public benchmark sources used by the AI model ratings aggregator.">
   <link rel="canonical" href="https://ai-model-rating.bossincrypto.dev/sources.html">
+  <meta property="og:title" content="Sources - ai-model-rating">
+  <meta property="og:description" content="Public benchmark sources used by the AI model ratings aggregator.">
+  <meta property="og:url" content="https://ai-model-rating.bossincrypto.dev/sources.html">
+  <meta property="og:image" content="https://ai-model-rating.bossincrypto.dev/favicon.svg">
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <nav aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/compare.html">Compare</a>
-      <a href="/trends.html">Trends</a>
-      <a href="/sources.html" aria-current="page">Sources</a>
+      <a class="brand" href="/">LLM Ratings</a>
+      <ul>
+        <li><a href="/">Ratings</a></li>
+        <li><a href="/compare.html">Compare</a></li>
+        <li><a href="/trends.html">Trends</a></li>
+        <li><a href="/sources.html" aria-current="page">Sources</a></li>
+      </ul>
     </nav>
   </header>
-  <main>
+  <main class="page-main">
     <h1>Sources</h1>
-    <p>Sources will be listed here.</p>
+    <p>These public benchmarks feed the ratings table.</p>
+    <section aria-labelledby="source-list-heading">
+      <h2 id="source-list-heading">Available sources</h2>
+      <ul>
+        <li>
+          <a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena (Chatbot Arena)</a>
+          <span class="external-icon" aria-hidden="true"></span>
+        </li>
+        <li>
+          <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis Intelligence Index</a>
+          <span class="external-icon" aria-hidden="true"></span>
+        </li>
+        <li>
+          <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">Open LLM Leaderboard v2</a>
+          <span class="external-icon" aria-hidden="true"></span>
+        </li>
+        <li>
+          <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats Leaderboard</a>
+          <span class="external-icon" aria-hidden="true"></span>
+        </li>
+        <li>
+          <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a>
+          <span class="external-icon" aria-hidden="true"></span>
+        </li>
+      </ul>
+    </section>
     <noscript>
-      <p>JavaScript appears to be disabled. This information is still available.</p>
+      <div class="noscript-content">
+        <p>JavaScript appears to be disabled. This source overview is still available without scripting.</p>
+      </div>
     </noscript>
   </main>
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 ai-model-rating</p>
+    <nav aria-label="Footer navigation">
+      <a href="/">Ratings</a>
+      <a href="/compare.html">Compare</a>
+      <a href="/trends.html">Trends</a>
+      <a href="/sources.html">Sources</a>
+      <a href="/LICENSE">License</a>
+    </nav>
   </footer>
   <script src="assets/js/main.js" defer></script>
 </body>
