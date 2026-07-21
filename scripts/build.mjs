@@ -2,7 +2,7 @@
 // scripts/build.mjs - Build GitHub Pages artifact into dist/
 // Uses only Node 20 stdlib: node:fs, node:zlib, node:path, node:url
 
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, existsSync, copyFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, existsSync, rmSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 import { join, resolve, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -87,7 +87,10 @@ const filesToProcess = [
   'favicon.svg',
 ];
 
-// Ensure dist exists
+// Clean dist before building
+if (existsSync(DIST)) {
+  rmSync(DIST, { recursive: true, force: true });
+}
 mkdirSync(DIST, { recursive: true });
 
 // Process root-level files
@@ -114,43 +117,75 @@ if (existsSync(assetsSrc) && statSync(assetsSrc).isDirectory()) {
 const dataSrc = join(ROOT, 'data');
 const dataDest = join(DIST, 'data');
 if (existsSync(dataSrc) && statSync(dataSrc).isDirectory()) {
-  walkDir(dataSrc, (full) => {
-    const rel = full.slice(dataSrc.length + 1);
-    const dest = join(dataDest, rel);
-    processFile(full, dest);
-  });
-}
-
-// Calculate sizes
-let totalUncompressed = 0;
-let totalGzipped = 0;
-
-function calculateSizes(dir) {
-  const entries = readdirSync(dir, { withFileTypes: true });
+  const allowedDataFiles = ['models.json', 'sources.json'];
+  const historySrc = join(dataSrc, 'history');
+  const entries = readdirSync(dataSrc, { withFileTypes: true });
   for (const entry of entries) {
-    const full = join(dir, entry.name);
+    const src = join(dataSrc, entry.name);
     if (entry.isDirectory()) {
-      calculateSizes(full);
-    } else if (entry.isFile()) {
-      const content = readFileSync(full);
-      totalUncompressed += content.length;
-      totalGzipped += gzipSync(content).length;
+      if (entry.name === 'history' && existsSync(historySrc) && statSync(historySrc).isDirectory()) {
+        walkDir(historySrc, (full) => {
+          const rel = full.slice(dataSrc.length + 1);
+          const dest = join(dataDest, rel);
+          processFile(full, dest);
+        });
+      }
+      continue;
+    }
+
+    if (entry.isFile() && allowedDataFiles.includes(entry.name)) {
+      const dest = join(dataDest, entry.name);
+      processFile(src, dest);
     }
   }
 }
 
-calculateSizes(DIST);
+// Calculate first-page size from assets actually copied into dist/
+let totalUncompressed = 0;
+let totalGzipped = 0;
+const firstPageAssets = [
+  'index.html',
+  'favicon.svg',
+  'assets/css/tokens.css',
+  'assets/css/base.css',
+  'assets/css/components.css',
+  'assets/css/pages.css',
+  'assets/js/main.js',
+  'data/models.json',
+  'data/sources.json',
+];
+
+const summary = [];
+
+for (const asset of firstPageAssets) {
+  const dest = join(DIST, asset);
+  if (existsSync(dest) && statSync(dest).isFile()) {
+    const content = readFileSync(dest);
+    const actualGzipBytes = gzipSync(content).length;
+    totalUncompressed += content.length;
+    totalGzipped += actualGzipBytes;
+    summary.push({
+      label: asset,
+      uncompressed: content.length,
+      gzipped: actualGzipBytes,
+    });
+  }
+}
 
 const uncompressedKB = (totalUncompressed / 1024).toFixed(1);
 const gzippedKB = (totalGzipped / 1024).toFixed(1);
 
 console.log(`dist: ${uncompressedKB} KB (uncompressed), ${gzippedKB} KB (gzip)`);
+summary.forEach((item) => {
+  console.log(` - ${item.label}: ${(item.uncompressed / 1024).toFixed(1)} KB / ${(item.gzipped / 1024).toFixed(1)} KB gzip`);
+});
 
 // Enforce budget
 if (totalUncompressed > 50 * 1024) {
   console.error(`ERROR: Uncompressed size ${uncompressedKB} KB exceeds 50 KB budget`);
   process.exit(1);
 }
+
 if (totalGzipped > 15 * 1024) {
   console.error(`ERROR: Gzipped size ${gzippedKB} KB exceeds 15 KB budget`);
   process.exit(1);

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // scripts/check-budgets.mjs
 // Enforces the size budget: dist/ first-page < 50 KB uncompressed, < 15 KB gzipped.
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { fileURLToPath } from 'node:url';
@@ -19,21 +19,26 @@ if (!statSync(DIST).isDirectory()) {
 let totalUncompressed = 0;
 let totalGzipped = 0;
 
-function walk(dir) {
-  const entries = readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const full = join(dir, entry.name);
-    if (entry.isDirectory()) {
-      walk(full);
-    } else if (entry.isFile()) {
-      const content = readFileSync(full);
-      totalUncompressed += content.length;
-      totalGzipped += gzipSync(content).length;
-    }
+const firstPageAssets = [
+  'index.html',
+  'favicon.svg',
+  'assets/css/tokens.css',
+  'assets/css/base.css',
+  'assets/css/components.css',
+  'assets/css/pages.css',
+  'assets/js/main.js',
+  'data/models.json',
+  'data/sources.json',
+];
+
+for (const asset of firstPageAssets) {
+  const path = join(DIST, asset);
+  if (existsSync(path) && statSync(path).isFile()) {
+    const content = readFileSync(path);
+    totalUncompressed += content.length;
+    totalGzipped += gzipSync(content).length;
   }
 }
-
-walk(DIST);
 
 const uncompressedKB = (totalUncompressed / 1024).toFixed(1);
 const gzippedKB = (totalGzipped / 1024).toFixed(1);
