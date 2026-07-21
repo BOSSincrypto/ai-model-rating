@@ -2,17 +2,16 @@
 // scripts/bump-version.mjs - Semantic version bump + tag + GitHub Release
 // Uses only Node 20 stdlib + gh CLI
 
-import { execSync, spawnSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { resolve, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = resolve(__filename, '..');
 const ROOT = resolve(__dirname, '..');
 const PKG_PATH = join(ROOT, 'package.json');
 const VERSION_JSON_PATH = join(ROOT, 'version.json');
-
-function join(...paths) {
-  return paths.join('/').replace(/\/+/g, '/');
-}
 
 function run(cmd, opts = {}) {
   const result = spawnSync(cmd, { shell: true, encoding: 'utf8', cwd: ROOT, ...opts });
@@ -67,10 +66,6 @@ function getBumpType() {
     }
   } catch {}
   return 'patch';
-}
-
-function existsSync(path) {
-  try { require('node:fs').accessSync(path); return true; } catch { return false; }
 }
 
 function generateNotes(prevTag, newTag) {
