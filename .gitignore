@@ -8,3 +8,4 @@ dist/
 data/.schema-temp.json
 data/.data-temp.json
 RELEASE_NOTES.md
+*.har
