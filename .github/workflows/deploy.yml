@@ -19,10 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4@0a44ba7841725637a19e28fa30b79a866c81b0a6
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6
         with:
           node-version: 20
 
@@ -30,15 +32,15 @@ jobs:
         run: node scripts/build.mjs
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5@5e9c4e1b3b2c9d5d4e6f7a8b9c0d1e2f3a4b5c6d
+        uses: actions/configure-pages@5e9c4e1b3b2c9d5d4e6f7a8b9c0d1e2f3a4b5c6d
 
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3@3a9c8b7c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a
+        uses: actions/upload-pages-artifact@3a9c8b7c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a
         with:
           path: dist
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4@c850b591e6d3b3f4a5b6c7d8e9f0a1b2c3d4e5f6
+        uses: actions/deploy-pages@c850b591e6d3b3f4a5b6c7d8e9f0a1b2c3d4e5f6
         id: pages
 
       - name: Bump patch version and create release
