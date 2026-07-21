@@ -1,0 +1,50 @@
+/* Design tokens for ai-model-rating - dark theme */
+
+:root[data-theme="dark"] {
+  --bg: #0b0d10;
+  --surface: #14171c;
+  --border: #22272f;
+  --text: #e6e9ef;
+  --muted: #8a93a3;
+  --accent: #4f9cff;
+  --success: #3ecf8e;
+  --warning: #f0b429;
+  --danger: #e5484d;
+  --gradient-top: linear-gradient(90deg, #4f9cff, #3ecf8e);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+
+  --radius: 6px;
+  --shadow-1: 0 1px 0 rgba(255,255,255,0.04) inset, 0 1px 2px rgba(0,0,0,0.4);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Mono", Consolas, monospace;
+}
+
+/* Light theme tokens (not active in v1, but prepared) */
+:root[data-theme="light"] {
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --border: #dee2e6;
+  --text: #1a1d21;
+  --muted: #6c757d;
+  --accent: #2563eb;
+  --success: #16a34a;
+  --warning: #ca8a04;
+  --danger: #dc2626;
+  --gradient-top: linear-gradient(90deg, #2563eb, #16a34a);
+}
