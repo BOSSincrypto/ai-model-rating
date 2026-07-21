@@ -3,56 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compare two LLM models side by side with detailed metrics from multiple sources.">
-  <title>Compare Models - LLM Model Ratings</title>
+  <title>ai-model-rating: compare</title>
+  <meta name="description" content="Shell page for comparing AI models.">
   <link rel="canonical" href="https://ai-model-rating.bossincrypto.dev/compare.html">
-  <meta property="og:title" content="Compare Models - LLM Model Ratings">
-  <meta property="og:description" content="Compare two LLM models side by side with detailed metrics.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ai-model-rating.bossincrypto.dev/compare.html">
-  <meta property="og:image" content="https://ai-model-rating.bossincrypto.dev/favicon.svg">
-  <link rel="stylesheet" href="/assets/css/tokens.css">
-  <link rel="stylesheet" href="/assets/css/base.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
 </head>
 <body>
   <header>
     <nav aria-label="Main navigation">
-      <a href="/" aria-label="Home" class="brand">LLM Ratings</a>
-      <ul>
-        <li><a href="/">Ratings</a></li>
-        <li><a href="/compare.html">Compare</a></li>
-        <li><a href="/trends.html">Trends</a></li>
-        <li><a href="/sources.html">Sources</a></li>
-      </ul>
+      <a href="/">Home</a>
+      <a href="/compare.html" aria-current="page">Compare</a>
+      <a href="/trends.html">Trends</a>
+      <a href="/sources.html">Sources</a>
     </nav>
   </header>
   <main>
-    <section aria-labelledby="compare-heading">
-      <h1 id="compare-heading">Compare Models</h1>
-      <div id="compare-view">
-        <p>Pick two models on the <a href="/">Ratings</a> page to compare them here.</p>
-        <noscript>
-          <p><strong>JavaScript is disabled.</strong> The comparison view requires JavaScript to hydrate data from the query string.</p>
-        </noscript>
-        <div id="recent-models" class="fallback-links">
-          <p>Recent models with deep links:</p>
-          <ul></ul>
-        </div>
-      </div>
-    </section>
+    <h1>Compare</h1>
+    <p>Compare model details here.</p>
+    <noscript>
+      <p>JavaScript appears to be disabled. This view is still available.</p>
+    </noscript>
   </main>
   <footer>
-    <p>&copy; 2026 LLM Model Ratings. Data from public sources.</p>
-    <nav aria-label="Footer navigation">
-      <a href="/">Ratings</a>
-      <a href="/compare.html">Compare</a>
-      <a href="/trends.html">Trends</a>
-      <a href="/sources.html">Sources</a>
-      <a href="/LICENSE">License</a>
-    </nav>
+    <p>&copy; 2026 ai-model-rating</p>
   </footer>
-  <script src="/assets/js/compare.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

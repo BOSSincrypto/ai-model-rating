@@ -1,0 +1,86 @@
+/* Components: table, card, button, badge, sparkline for ai-model-rating */
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: var(--space-4, 16px) 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--text-sm, 14px);
+}
+
+th, td {
+  padding: var(--space-2, 8px) var(--space-3, 12px);
+  border-bottom: 1px solid var(--border, #22272f);
+  text-align: left;
+}
+
+th {
+  background: var(--surface, #14171c);
+  font-weight: 600;
+  color: var(--muted, #8a93a3);
+  font-size: var(--text-xs, 12px);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+tr:nth-child(even) {
+  background: var(--surface, #14171c);
+}
+
+tr:hover {
+  background: rgba(79, 156, 255, 0.08);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px var(--space-2, 8px);
+  border-radius: var(--radius, 6px);
+  font-size: var(--text-xs, 12px);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge--open { background: var(--success, #3ecf8e); color: #000; }
+.badge--closed { background: var(--warning, #f0b429); color: #000; }
+.badge--proprietary { background: var(--danger, #e5484d); color: #fff; }
+.badge--apache { background: var(--accent, #4f9cff); color: #fff; }
+.badge--mit { background: var(--muted, #8a93a3); color: #fff; }
+
+button {
+  height: 32px;
+  padding: 0 var(--space-3, 12px);
+  border: 1px solid var(--border, #22272f);
+  background: var(--surface, #14171c);
+  color: var(--text, #e6e9ef);
+  border-radius: var(--radius, 6px);
+  font-size: var(--text-sm, 14px);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+button:hover {
+  background: var(--border, #22272f);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent, #4f9cff);
+  outline-offset: 2px;
+}
+
+.card {
+  background: var(--surface, #14171c);
+  border: 1px solid var(--border, #22272f);
+  border-radius: var(--radius, 6px);
+  padding: var(--space-4, 16px);
+}
+
+.sparkline {
+  width: 100px;
+  height: 24px;
+}

@@ -3,89 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LLM Model Ratings Aggregator - Compare LLM models across LMArena, Artificial Analysis, Open LLM Leaderboard, LLM Stats, and BenchLM.">
-  <title>LLM Model Ratings Aggregator</title>
+  <title>ai-model-rating</title>
+  <meta name="description" content="Lightweight static shell for the AI model rating site.">
   <link rel="canonical" href="https://ai-model-rating.bossincrypto.dev/">
-  <meta property="og:title" content="LLM Model Ratings Aggregator">
-  <meta property="og:description" content="Compare LLM models across LMArena, Artificial Analysis, Open LLM Leaderboard, LLM Stats, and BenchLM.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ai-model-rating.bossincrypto.dev/">
-  <meta property="og:image" content="https://ai-model-rating.bossincrypto.dev/favicon.svg">
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
 </head>
 <body>
   <header>
     <nav aria-label="Main navigation">
-      <a href="/" aria-current="page">Ratings</a>
+      <a href="/">Home</a>
       <a href="/compare.html">Compare</a>
       <a href="/trends.html">Trends</a>
       <a href="/sources.html">Sources</a>
     </nav>
   </header>
   <main>
-    <h1>LLM Model Ratings Aggregator</h1>
-    <p>Loading model ratings from 5 public sources...</p>
-    <table id="ratings-table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Model</th>
-          <th scope="col">Provider</th>
-          <th scope="col">Sources</th>
-          <th scope="col">Score</th>
-          <th scope="col">Context</th>
-          <th scope="col">$/1M out</th>
-          <th scope="col">Type</th>
-          <th scope="col">License</th>
-          <th scope="col">Compare</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td colspan="10">Loading data...</td></tr>
-      </tbody>
-    </table>
+    <h1>Home</h1>
+    <p>Welcome to the AI model rating shell.</p>
     <noscript>
-      <p>JavaScript is disabled. Showing static preview (first 5 models). Full interactivity requires JavaScript.</p>
+      <p>JavaScript appears to be disabled. This page is still accessible.</p>
     </noscript>
   </main>
-  <aside aria-label="Filters">
-    <details open>
-      <summary>Filters</summary>
-      <fieldset>
-        <legend>Provider</legend>
-        <select id="filter-provider" multiple size="5"></select>
-      </fieldset>
-      <fieldset>
-        <legend>Type</legend>
-        <label><input type="radio" name="type" value=""> All</label>
-        <label><input type="radio" name="type" value="open"> Open</label>
-        <label><input type="radio" name="type" value="closed"> Closed</label>
-      </fieldset>
-      <fieldset>
-        <legend>License</legend>
-        <select id="filter-license" multiple size="5"></select>
-      </fieldset>
-      <fieldset>
-        <legend>Search</legend>
-        <input type="search" id="filter-search" placeholder="Model name...">
-      </fieldset>
-      <fieldset>
-        <legend>Context window ≤</legend>
-        <input type="number" id="filter-context-max" placeholder="Max tokens" min="0">
-      </fieldset>
-      <fieldset>
-        <legend>Price ≤ $/1M out</legend>
-        <input type="number" id="filter-price-max" placeholder="Max price" min="0" step="0.1">
-      </fieldset>
-    </details>
-    <p id="result-count" aria-live="polite"></p>
-  </aside>
   <footer>
-    <p>Data from <a href="/sources.html">5 public sources</a> · Updated weekly · <a href="https://github.com/BOSSincrypto/ai-model-rating">GitHub</a> · MIT License</p>
+    <p>&copy; 2026 ai-model-rating</p>
   </footer>
-  <script src="assets/js/filters.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
