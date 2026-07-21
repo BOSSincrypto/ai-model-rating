@@ -102,7 +102,7 @@ for (const file of filesToProcess) {
 // Process assets directory
 const assetsSrc = join(ROOT, 'assets');
 const assetsDest = join(DIST, 'assets');
-if (statSync(assetsSrc).isDirectory()) {
+if (existsSync(assetsSrc) && statSync(assetsSrc).isDirectory()) {
   walkDir(assetsSrc, (full) => {
     const rel = full.slice(assetsSrc.length + 1);
     const dest = join(assetsDest, rel);
@@ -113,7 +113,7 @@ if (statSync(assetsSrc).isDirectory()) {
 // Process data directory
 const dataSrc = join(ROOT, 'data');
 const dataDest = join(DIST, 'data');
-if (statSync(dataSrc).isDirectory()) {
+if (existsSync(dataSrc) && statSync(dataSrc).isDirectory()) {
   walkDir(dataSrc, (full) => {
     const rel = full.slice(dataSrc.length + 1);
     const dest = join(dataDest, rel);
