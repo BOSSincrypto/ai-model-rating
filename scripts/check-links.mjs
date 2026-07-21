@@ -17,7 +17,7 @@ const pages = [
   'trends.html',
   'sources.html',
   '404.html',
-];
+].filter((page) => existsSync(resolve(ROOT, page)));
 
 const allowedExternalPrefixes = [
   'https://',
