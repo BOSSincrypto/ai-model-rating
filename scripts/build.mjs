@@ -2,7 +2,7 @@
 // scripts/build.mjs - Build GitHub Pages artifact into dist/
 // Uses only Node 20 stdlib: node:fs, node:zlib, node:path, node:url
 
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, copyFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, existsSync, copyFileSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 import { join, resolve, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -94,7 +94,7 @@ mkdirSync(DIST, { recursive: true });
 for (const file of filesToProcess) {
   const src = join(ROOT, file);
   const dest = join(DIST, file);
-  if (statSync(src).isFile()) {
+  if (existsSync(src) && statSync(src).isFile()) {
     processFile(src, dest);
   }
 }

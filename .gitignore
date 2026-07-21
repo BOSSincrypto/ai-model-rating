@@ -1,0 +1,10 @@
+# ai-model-rating
+
+node_modules/
+npm-debug.log*
+.DS_Store
+Thumbs.db
+dist/
+data/.schema-temp.json
+data/.data-temp.json
+RELEASE_NOTES.md
