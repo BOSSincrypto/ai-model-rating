@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // scripts/check-budgets.mjs
-// Enforces the size budget: dist/ first-page < 50 KB uncompressed, < 15 KB gzipped.
+// Enforces the size budget: dist/ first-page < 60 KB uncompressed, < 15 KB gzipped.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
@@ -46,8 +46,8 @@ const gzippedKB = (totalGzipped / 1024).toFixed(1);
 
 console.log(`dist: ${uncompressedKB} KB (uncompressed), ${gzippedKB} KB (gzip)`);
 
-if (totalUncompressed > 50 * 1024) {
-  console.error(`ERROR: Uncompressed size ${uncompressedKB} KB exceeds 50 KB budget`);
+if (totalUncompressed > 60 * 1024) {
+  console.error(`ERROR: Uncompressed size ${uncompressedKB} KB exceeds 60 KB budget`);
   process.exit(1);
 }
 

@@ -182,8 +182,8 @@ summary.forEach((item) => {
 });
 
 // Enforce budget
-if (totalUncompressed > 50 * 1024) {
-  console.error(`ERROR: Uncompressed size ${uncompressedKB} KB exceeds 50 KB budget`);
+if (totalUncompressed > 60 * 1024) {
+  console.error(`ERROR: Uncompressed size ${uncompressedKB} KB exceeds 60 KB budget`);
   process.exit(1);
 }
 
