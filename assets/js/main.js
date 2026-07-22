@@ -4,17 +4,22 @@
 
 const SORT_STATE_KEY = 'ai-model-rating-sort';
 
-function sortByText(tds, compareFn) {
-  const rows = Array.from(tds.parentElement.parentElement.rows);
-  const sorted = rows.slice(1).sort((a, b) => {
-    const aText = (a.cells[tds.cellIndex] ? a.cells[tds.cellIndex].textContent.trim() : '').toLowerCase();
-    const bText = (b.cells[tds.cellIndex] ? b.cells[tds.cellIndex].textContent.trim() : '').toLowerCase();
+function sortByColumn(table, columnIndex, compareFn) {
+  const tbody = table.querySelector('tbody');
+  const headerRow = table.querySelector('thead tr');
+  const rows = Array.from(tbody.rows);
+  const headerCells = Array.from(headerRow.cells);
+  const headerText = headerCells[columnIndex].textContent.trim().toLowerCase();
+
+  const sortedRows = rows.slice().sort((a, b) => {
+    const aText = a.cells[columnIndex].textContent.trim().toLowerCase();
+    const bText = b.cells[columnIndex].textContent.trim().toLowerCase();
     return compareFn(aText, bText);
   });
 
   const fragment = document.createDocumentFragment();
-  sorted.forEach(row => fragment.appendChild(row));
-  tds.parentElement.parentElement.tbody.appendChild(fragment);
+  sortedRows.forEach(row => fragment.appendChild(row));
+  tbody.appendChild(fragment);
 }
 
 function updateSortState(key, direction) {
@@ -27,35 +32,37 @@ function getSortState(key) {
 
 function clearSortState() {
   Object.keys(localStorage)
-    .filter(key => key.startsWith(SORT_STATE_KEY))
-    .forEach(key => localStorage.removeItem(key));
+    .filter(k => k.startsWith(SORT_STATE_KEY))
+    .forEach(k => localStorage.removeItem(k));
 }
 
-function applySort(cell) {
-  const table = cell.closest('table');
-  if (!cell.classList.contains('sortable')) {
-    return;
-  }
+function applySort(thElement) {
+  const table = thElement.closest('table');
+  if (!table) return;
 
-  const currentSort = cell.getAttribute('aria-sort');
+  const isSortable = thElement.classList.contains('sortable');
+  if (!isSortable) return;
+
+  const columnIndex = thElement.cellIndex;
+  const currentSort = thElement.getAttribute('aria-sort') || 'none';
   const newDirection = currentSort === 'ascending' ? 'descending' : 'ascending';
-  const compareFn = newDirection === 'ascending' ? (a, b) => (a < b ? -1 : a > b ? 1 : 0) : (a, b) => (a > b ? -1 : a < b ? 1 : 0);
+  const compareFn = newDirection === 'ascending'
+    ? (a, b) => (a < b ? -1 : a > b ? 1 : 0)
+    : (a, b) => (a > b ? -1 : a < b ? 1 : 0);
 
-  table.querySelectorAll('th.sortable').forEach(header => {
-    const key = header.textContent.trim().toLowerCase();
-    if (header === cell) {
+  // Update aria-sort on all headers
+  const allHeaders = table.querySelectorAll('th.sortable');
+  allHeaders.forEach((header, idx) => {
+    if (header === thElement) {
       header.setAttribute('aria-sort', newDirection);
     } else {
-      header.setAttribute('aria-sort', getSortState(key) === 'ascending' ? 'ascending' : 'none');
+      const storedDir = getSortState(header.textContent.trim().toLowerCase());
+      header.setAttribute('aria-sort', storedDir === 'ascending' ? 'ascending' : 'none');
     }
   });
 
-  const tds = table.querySelector(`thead th:nth-child(${cell.cellIndex + 1})`);
-  if (tds) {
-    sortByText(tds, compareFn);
-  }
-
-  updateSortState(cell.textContent.trim().toLowerCase(), newDirection);
+  sortByColumn(table, columnIndex, compareFn);
+  updateSortState(thElement.textContent.trim().toLowerCase(), newDirection);
 }
 
 function handleSortKeydown(event) {
@@ -87,17 +94,21 @@ function initSortableHeaders() {
 }
 
 function restoreSortState() {
-  Object.keys(localStorage)
-    .filter(key => key.startsWith(SORT_STATE_KEY))
-    .forEach(key => {
-      const headerText = key.replace(SORT_STATE_KEY + '-', '');
-      const header = Array.from(document.querySelectorAll('th.sortable')).find(
-        header => header.textContent.trim().toLowerCase() === headerText
-      );
-      if (header && getSortState(headerText) === 'ascending') {
-        applySort(header);
+  const page = document.querySelector('.page-main') || document;
+  const tables = page.querySelectorAll('table');
+  tables.forEach(table => {
+    const headers = table.querySelectorAll('th.sortable');
+    headers.forEach(header => {
+      const storedDir = getSortState(header.textContent.trim().toLowerCase());
+      if (storedDir === 'ascending' || storedDir === 'descending') {
+        header.setAttribute('aria-sort', storedDir);
+        const compareFn = storedDir === 'ascending'
+          ? (a, b) => (a < b ? -1 : a > b ? 1 : 0)
+          : (a, b) => (a > b ? -1 : a < b ? 1 : 0);
+        sortByColumn(table, header.cellIndex, compareFn);
       }
     });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
