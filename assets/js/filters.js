@@ -33,12 +33,12 @@
     var rows = $$('tbody tr', table), n = 0;
     rows.forEach(function (r) {
       var ok = true;
-      if (s.search && ok) { ok = lc(r.cells[1]).indexOf(lc(s.search)) > -1; }
-      if (s.provider && ok) { ok = lc(r.cells[2]) === lc(s.provider); }
-      if (s.type && ok) { ok = lc(r.cells[7]).indexOf(lc(s.type)) > -1; }
-      if (s.license && ok) { ok = lc(r.cells[8]).indexOf(lc(s.license)) > -1; }
-      if (s.maxContext && ok) { ok = num(r.cells[5]) <= parseFloat(s.maxContext); }
-      if (s.maxPrice && ok) { ok = num(r.cells[6]) <= parseFloat(s.maxPrice); }
+      if (s.search && ok) { ok = lc(r.cells[1].textContent).indexOf(lc(s.search)) > -1; }
+      if (s.provider && ok) { ok = lc(r.cells[2].textContent) === lc(s.provider); }
+      if (s.type && ok) { ok = lc(r.cells[7].textContent).indexOf(lc(s.type)) > -1; }
+      if (s.license && ok) { ok = lc(r.cells[8].textContent).indexOf(lc(s.license)) > -1; }
+      if (s.maxContext && ok) { ok = num(r.cells[5].textContent) <= parseFloat(s.maxContext); }
+      if (s.maxPrice && ok) { ok = num(r.cells[6].textContent) <= parseFloat(s.maxPrice); }
       r.hidden = !ok;
       if (ok) n++;
     });
@@ -93,7 +93,7 @@
     if (!table || !ps || !ls) return;
     var provs = {}, lics = {};
     $$('tbody tr', table).forEach(function (r) {
-      var p = lc(r.cells[2]), l = lc(r.cells[8]);
+      var p = lc(r.cells[2].textContent), l = lc(r.cells[8].textContent);
       if (p) provs[p] = 1;
       if (l) lics[l] = 1;
     });
