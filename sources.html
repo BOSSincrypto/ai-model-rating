@@ -29,35 +29,109 @@
   </header>
   <main class="page-main">
     <h1>Sources</h1>
-    <p>These public benchmarks feed the ratings table.</p>
+    <p>These public benchmarks feed the ratings table. Each source measures models differently — Elo scores, composite indices, or benchmark averages.</p>
+    <p id="sources-status" class="sources-status" aria-live="polite"></p>
+
     <section aria-labelledby="source-list-heading">
       <h2 id="source-list-heading">Available sources</h2>
-      <ul>
-        <li>
-          <a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena (Chatbot Arena)</a>
-          <span class="external-icon" aria-hidden="true"></span>
-        </li>
-        <li>
-          <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis Intelligence Index</a>
-          <span class="external-icon" aria-hidden="true"></span>
-        </li>
-        <li>
-          <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">Open LLM Leaderboard v2</a>
-          <span class="external-icon" aria-hidden="true"></span>
-        </li>
-        <li>
-          <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats Leaderboard</a>
-          <span class="external-icon" aria-hidden="true"></span>
-        </li>
-        <li>
-          <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a>
-          <span class="external-icon" aria-hidden="true"></span>
-        </li>
-      </ul>
+      <div class="card-grid" id="sources-grid">
+        <!-- Cards rendered by sources.js: each card shows name, URL, metric, kind, last updated -->
+        <div class="card source-card">
+          <h3 class="source-card__title">LMArena (Chatbot Arena)</h3>
+          <p class="source-card__url"><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">lmarena.ai <svg class="external-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4.5M11 1V7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+          <dl class="source-card__details">
+            <div class="source-card__row">
+              <dt>Metric</dt>
+              <dd>Elo (human preference)</dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Kind</dt>
+              <dd><span class="badge badge--open">Human eval</span></dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Last updated</dt>
+              <dd class="source-card__date">2026-07-20</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="card source-card">
+          <h3 class="source-card__title">Artificial Analysis Intelligence Index</h3>
+          <p class="source-card__url"><a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">artificialanalysis.ai <svg class="external-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4.5M11 1V7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+          <dl class="source-card__details">
+            <div class="source-card__row">
+              <dt>Metric</dt>
+              <dd>Composite intelligence index</dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Kind</dt>
+              <dd><span class="badge badge--apache">Composite</span></dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Last updated</dt>
+              <dd class="source-card__date">2026-07-20</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="card source-card">
+          <h3 class="source-card__title">Open LLM Leaderboard v2</h3>
+          <p class="source-card__url"><a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">huggingface.co <svg class="external-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4.5M11 1V7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+          <dl class="source-card__details">
+            <div class="source-card__row">
+              <dt>Metric</dt>
+              <dd>Avg of IFEval/BBH/MATH/GPQA/MUSR/MMLU-PRO</dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Kind</dt>
+              <dd><span class="badge badge--open">Open-source</span></dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Last updated</dt>
+              <dd class="source-card__date">2026-07-20</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="card source-card">
+          <h3 class="source-card__title">LLM Stats Leaderboard</h3>
+          <p class="source-card__url"><a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">llm-stats.com <svg class="external-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4.5M11 1V7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+          <dl class="source-card__details">
+            <div class="source-card__row">
+              <dt>Metric</dt>
+              <dd>Composite score</dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Kind</dt>
+              <dd><span class="badge badge--apache">Composite</span></dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Last updated</dt>
+              <dd class="source-card__date">2026-07-20</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="card source-card">
+          <h3 class="source-card__title">BenchLM</h3>
+          <p class="source-card__url"><a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">benchlm.ai <svg class="external-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4.5M11 1V7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+          <dl class="source-card__details">
+            <div class="source-card__row">
+              <dt>Metric</dt>
+              <dd>Overall benchmark roll-up</dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Kind</dt>
+              <dd><span class="badge badge--apache">Composite</span></dd>
+            </div>
+            <div class="source-card__row">
+              <dt>Last updated</dt>
+              <dd class="source-card__date">2026-07-20</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
     </section>
+
     <noscript>
       <div class="noscript-content">
-        <p>JavaScript appears to be disabled. This source overview is still available without scripting.</p>
+        <p>JavaScript appears to be disabled. The source cards above still show all available sources with their latest update dates.</p>
       </div>
     </noscript>
   </main>
@@ -72,5 +146,6 @@
     </nav>
   </footer>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/sources.js" defer></script>
 </body>
 </html>

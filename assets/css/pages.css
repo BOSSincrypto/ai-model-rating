@@ -496,3 +496,61 @@ tr:focus-visible {
 .trends-note p { margin: 0; }
 .trends-empty { padding: var(--space-6, 32px); text-align: center; color: var(--muted, #8a93a3); font-size: var(--text-sm, 14px); background: var(--surface, #14171c); border: 1px solid var(--border, #22272f); border-radius: var(--radius, 6px); }
 @media (max-width: 640px) { .trend-sparkline-cell { min-width: 80px; } }
+
+/* Sources page styles */
+.sources-status {
+  font-size: var(--text-sm, 14px);
+  color: var(--muted, #8a93a3);
+  margin-bottom: var(--space-3, 12px);
+}
+
+.source-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 8px);
+}
+
+.source-card__title {
+  font-size: var(--text-base, 16px);
+  font-weight: 600;
+  color: var(--text, #e6e9ef);
+  margin: 0;
+}
+
+.source-card__url {
+  margin: 0;
+}
+
+.source-card__details {
+  margin: var(--space-2, 8px) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 8px);
+}
+
+.source-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2, 8px);
+}
+
+.source-card__row dt {
+  font-size: var(--text-xs, 12px);
+  color: var(--muted, #8a93a3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.source-card__row dd {
+  margin: 0;
+  font-size: var(--text-sm, 14px);
+  color: var(--text, #e6e9ef);
+  text-align: right;
+}
+
+.source-card__date {
+  font-family: var(--font-mono, ui-monospace, Consolas, monospace);
+  font-size: var(--text-xs, 12px);
+}
