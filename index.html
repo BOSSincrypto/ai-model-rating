@@ -30,9 +30,52 @@
   <main class="page-main">
     <h1>Model Ratings</h1>
     <p>Explore leading models ranked across public benchmarks.</p>
+
+    <!-- Filter sidebar -->
+    <aside class="filter-sidebar" aria-label="Filters">
+      <details class="filter-section" open>
+        <summary>Filters</summary>
+        <div class="filter-controls">
+          <div class="filter-group">
+            <label for="filter-search">Search</label>
+            <input type="search" id="filter-search" placeholder="Model name…" aria-label="Search by model name">
+          </div>
+          <div class="filter-group">
+            <label for="filter-provider">Provider</label>
+            <select id="filter-provider" aria-label="Filter by provider">
+              <option value="">All providers</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-type">Type</label>
+            <select id="filter-type" aria-label="Filter by type">
+              <option value="">All types</option>
+              <option value="closed">Closed</option>
+              <option value="open">Open</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-license">License</label>
+            <select id="filter-license" aria-label="Filter by license">
+              <option value="">All licenses</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-max-context">Max context</label>
+            <input type="number" id="filter-max-context" placeholder="1048576" min="0" step="1" aria-label="Maximum context window (tokens)">
+          </div>
+          <div class="filter-group">
+            <label for="filter-max-price">Max price ($/1M out)</label>
+            <input type="number" id="filter-max-price" placeholder="100" min="0" step="0.01" aria-label="Maximum price per 1M output tokens">
+          </div>
+          <button type="button" id="filter-clear" class="filter-clear">Clear filters</button>
+        </div>
+      </details>
+    </aside>
+
     <section class="results-area" aria-labelledby="results-heading">
       <h2 id="results-heading">Results</h2>
-      <p class="results-count" aria-live="polite">15 models from 5 public sources.</p>
+      <p id="results-count" class="results-count" aria-live="polite">15 models from 5 public sources.</p>
       <div class="table-wrapper">
         <table id="results-table" aria-label="Model ratings">
           <thead>
@@ -261,5 +304,6 @@
     </nav>
   </footer>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/filters.js" defer></script>
 </body>
 </html>

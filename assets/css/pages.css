@@ -304,3 +304,95 @@ tr:focus-visible {
     animation: none !important;
   }
 }
+
+/* Filter sidebar for ai-model-rating */
+
+.filter-sidebar {
+  margin-bottom: var(--space-4, 16px);
+}
+
+.filter-section {
+  background: var(--surface, #14171c);
+  border: 1px solid var(--border, #22272f);
+  border-radius: var(--radius, 6px);
+  padding: var(--space-3, 12px);
+}
+
+.filter-section summary {
+  font-weight: 600;
+  color: var(--text, #e6e9ef);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.filter-section summary::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: var(--space-2, 8px);
+  vertical-align: middle;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--muted, #8a93a3);
+}
+
+.filter-section[open] summary::after {
+  border-top: 0;
+  border-bottom: 4px solid var(--muted, #8a93a3);
+}
+
+.filter-controls {
+  margin-top: var(--space-4, 16px);
+  display: grid;
+  gap: var(--space-3, 12px);
+}
+
+.filter-group label {
+  display: block;
+  font-size: var(--text-xs, 12px);
+  color: var(--muted, #8a93a3);
+  margin-bottom: var(--space-1, 4px);
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  background: var(--bg, #0b0d10);
+  color: var(--text, #e6e9ef);
+  border: 1px solid var(--border, #22272f);
+  border-radius: var(--radius, 6px);
+  padding: var(--space-2, 8px) var(--space-3, 12px);
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  outline: 2px solid var(--accent, #4f9cff);
+  outline-offset: 2px;
+}
+
+.filter-clear {
+  width: 100%;
+  background: var(--surface, #14171c);
+  color: var(--text, #e6e9ef);
+  border: 1px solid var(--border, #22272f);
+  border-radius: var(--radius, 6px);
+  padding: var(--space-2, 8px);
+  cursor: pointer;
+}
+
+.filter-clear:hover {
+  background: var(--border, #22272f);
+}
+
+.filter-clear:focus-visible {
+  outline: 2px solid var(--accent, #4f9cff);
+  outline-offset: 2px;
+}

@@ -27,6 +27,7 @@ const firstPageAssets = [
   'assets/css/components.css',
   'assets/css/pages.css',
   'assets/js/main.js',
+  'assets/js/filters.js',
   'data/models.json',
   'data/sources.json',
 ];
