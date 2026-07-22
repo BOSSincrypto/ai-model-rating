@@ -1,0 +1,49 @@
+{
+  "sources": [
+    {
+      "id": "lmarena",
+      "name": "LMArena (Chatbot Arena)",
+      "url": "https://lmarena.ai/",
+      "metric": "Elo (human preference)",
+      "kind": "human-eval",
+      "license": "open-data",
+      "weight": 0.3
+    },
+    {
+      "id": "aa",
+      "name": "Artificial Analysis Intelligence Index",
+      "url": "https://artificialanalysis.ai/",
+      "metric": "Composite intelligence index",
+      "kind": "composite",
+      "license": "open-data",
+      "weight": 0.25
+    },
+    {
+      "id": "ollm",
+      "name": "Open LLM Leaderboard v2",
+      "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+      "metric": "Avg of IFEval/BBH/MATH/GPQA/MUSR/MMLU-PRO",
+      "kind": "open-source",
+      "license": "open-data",
+      "weight": 0.15
+    },
+    {
+      "id": "llmstats",
+      "name": "LLM Stats Leaderboard",
+      "url": "https://llm-stats.com/",
+      "metric": "Composite score",
+      "kind": "composite",
+      "license": "open-data",
+      "weight": 0.15
+    },
+    {
+      "id": "benchlm",
+      "name": "BenchLM",
+      "url": "https://benchlm.ai/",
+      "metric": "Overall benchmark roll-up",
+      "kind": "composite",
+      "license": "open-data",
+      "weight": 0.15
+    }
+  ]
+}

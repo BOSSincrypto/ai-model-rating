@@ -1,0 +1,100 @@
+{
+  "snapshot_date": "2026-07-20",
+  "models": [
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "provider": "Anthropic",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 1048576,
+      "pricing": { "input_per_1m": 15.0, "output_per_1m": 75.0 },
+      "scores": {
+        "lmarena_elo": 1509,
+        "aa_intelligence": 78,
+        "ollm_avg": null,
+        "llmstats_composite": 92.4,
+        "benchlm_overall": 95.0
+      },
+      "rank": 1,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "provider": "OpenAI",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 1114112,
+      "pricing": { "input_per_1m": 7.78, "output_per_1m": 22.0 },
+      "scores": {
+        "lmarena_elo": 1494,
+        "aa_intelligence": 76,
+        "ollm_avg": null,
+        "llmstats_composite": 90.7,
+        "benchlm_overall": 94.0
+      },
+      "rank": 2,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "provider": "Moonshot AI",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 1048576,
+      "pricing": { "input_per_1m": 3.0, "output_per_1m": 15.0 },
+      "scores": {
+        "lmarena_elo": 1472,
+        "aa_intelligence": 74,
+        "ollm_avg": null,
+        "llmstats_composite": 88.9,
+        "benchlm_overall": 93.0
+      },
+      "rank": 3,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
+    },
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "provider": "Anthropic",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 1048576,
+      "pricing": { "input_per_1m": 15.0, "output_per_1m": 75.0 },
+      "scores": {
+        "lmarena_elo": 1468,
+        "aa_intelligence": 73,
+        "ollm_avg": null,
+        "llmstats_composite": 88.5,
+        "benchlm_overall": 92.0
+      },
+      "rank": 4,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "provider": "Anthropic",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 1048576,
+      "pricing": { "input_per_1m": 3.0, "output_per_1m": 15.0 },
+      "scores": {
+        "lmarena_elo": 1452,
+        "aa_intelligence": 71,
+        "ollm_avg": null,
+        "llmstats_composite": 86.2,
+        "benchlm_overall": 90.0
+      },
+      "rank": 5,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
+    }
+  ]
+}
