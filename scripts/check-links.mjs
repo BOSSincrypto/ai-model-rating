@@ -28,6 +28,10 @@ const allowedExternalPrefixes = [
   '#',
 ];
 
+const allowedLocalQueryPrefixes = [
+  '/compare.html?',
+];
+
 function isLocal(href) {
   if (!href) return false;
   if (allowedExternalPrefixes.some((prefix) => href.startsWith(prefix))) {
@@ -54,6 +58,11 @@ for (const page of pages) {
   const matches = [...html.matchAll(/href=["']([^"']+)["']/g)];
   for (const [, href] of matches) {
     if (!isLocal(href)) continue;
+    // Skip self-referential page links with query params (e.g. /compare.html?a=...&b=...)
+    if (href.includes('?')) {
+      const pageName = href.split('?')[0].replace(/^\//, '');
+      if (pages.includes(pageName)) continue;
+    }
     const target = resolvePath(href, page);
     try {
       accessSync(target);

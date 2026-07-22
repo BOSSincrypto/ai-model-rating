@@ -29,17 +29,42 @@
   </header>
   <main class="page-main">
     <h1>Compare Models</h1>
-    <p>Pick two models from the ratings table and review their details side by side.</p>
+    <p>Review two models side by side on benchmarks, context, and pricing.</p>
+    <p id="compare-status" class="compare-status" aria-live="polite"></p>
+    <div id="compare-results" class="compare-results" hidden>
+      <table class="compare-table compare-cross-table">
+        <thead>
+          <tr>
+            <th scope="col">Metric</th>
+            <th scope="col"><span class="compare-label-a">A</span></th>
+            <th scope="col"><span class="compare-label-b">B</span></th>
+            <th scope="col" class="compare-diff-header">Diff</th>
+          </tr>
+        </thead>
+        <tbody id="compare-cross-body"></tbody>
+      </table>
+    </div>
     <noscript>
       <div class="noscript-content">
-        <p>JavaScript appears to be disabled. Choose two models below and open their pages directly.</p>
+        <p>JavaScript appears to be disabled. Pick two recent models below and compare their details directly.</p>
         <ul>
-          <li><a href="/">Open Ratings</a></li>
-          <li><a href="/trends.html">Review Trends</a></li>
-          <li><a href="/sources.html">Review Sources</a></li>
+          <li><a href="/compare.html?a=claude-fable-5&b=gpt-5-6-sol">Claude Fable 5 vs GPT-5.6 Sol</a></li>
+          <li><a href="/compare.html?a=gpt-5-6-sol&b=kimi-k3">GPT-5.6 Sol vs Kimi K3</a></li>
+          <li><a href="/compare.html?a=kimi-k3&b=claude-opus-4-8">Kimi K3 vs Claude Opus 4.8</a></li>
         </ul>
       </div>
     </noscript>
+    <div id="compare-fallback" class="compare-fallback" hidden>
+      <p id="compare-fallback-text">Pick two models from the ratings table and open their compare links directly.</p>
+      <ul>
+        <li><a href="/compare.html?a=claude-fable-5&b=gpt-5-6-sol">Claude Fable 5 vs GPT-5.6 Sol</a></li>
+        <li><a href="/compare.html?a=gpt-5-6-sol&b=kimi-k3">GPT-5.6 Sol vs Kimi K3</a></li>
+        <li><a href="/compare.html?a=kimi-k3&b=claude-opus-4-8">Kimi K3 vs Claude Opus 4.8</a></li>
+        <li><a href="/compare.html?a=claude-opus-4-8&b=claude-sonnet-5">Claude Opus 4.8 vs Claude Sonnet 5</a></li>
+        <li><a href="/compare.html?a=claude-sonnet-5&b=gpt-5-5">Claude Sonnet 5 vs GPT-5.5</a></li>
+        <li><a href="/compare.html?a=gpt-5-5&b=gemini-3-pro">GPT-5.5 vs Gemini 3 Pro</a></li>
+      </ul>
+    </div>
   </main>
   <footer class="site-footer">
     <p>&copy; 2026 ai-model-rating</p>
@@ -52,5 +77,6 @@
     </nav>
   </footer>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/compare.js" defer></script>
 </body>
 </html>

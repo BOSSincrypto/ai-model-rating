@@ -152,6 +152,7 @@ const firstPageAssets = [
   'assets/css/pages.css',
   'assets/js/main.js',
   'assets/js/filters.js',
+  'assets/js/compare.js',
   'data/models.json',
   'data/sources.json',
 ];
