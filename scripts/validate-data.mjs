@@ -25,7 +25,7 @@ writeFileSync(resolve(ROOT, 'data/.data-temp.json'), readFileSync(dataPath, 'utf
 const result = spawnSync('npx', ['ajv-cli@latest', 'validate', '-s', './data/.schema-temp.json', '-d', './data/.data-temp.json'], {
   cwd: ROOT,
   encoding: 'utf8',
-  shell: false,
+  shell: true,
   stdio: 'pipe',
 });
 

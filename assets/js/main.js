@@ -1,6 +1,6 @@
 'use strict';
 /* main.js - Sort helper + bootstrap for ai-model-rating.
-   Progressive enhancement: table sorting and keyboard activation. */
+   Progressive enhancement: table sorting, keyboard activation, and compare selection. */
 
 const SORT_STATE_KEY = 'ai-model-rating-sort';
 
@@ -111,7 +111,56 @@ function restoreSortState() {
   });
 }
 
+// Compare selection functionality
+function initCompareSelection() {
+  const table = document.getElementById('results-table');
+  const compareBar = document.getElementById('compare-bar');
+  const compareButton = document.getElementById('compare-button');
+  const compareButtonText = document.getElementById('compare-button-text');
+
+  if (!table || !compareBar || !compareButton) {
+    return;
+  }
+
+  const checkboxes = table.querySelectorAll('tbody input[type="checkbox"][data-model-name]');
+  let selectedModels = [];
+
+  function updateCompareUI() {
+    const count = selectedModels.length;
+    compareButtonText.textContent = `Compare selected (${count}/2)`;
+    compareButton.disabled = count !== 2;
+    compareBar.hidden = count < 2;
+  }
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const modelId = checkbox.value;
+      const modelName = checkbox.dataset.modelName;
+
+      if (checkbox.checked) {
+        if (selectedModels.length < 2) {
+          selectedModels.push({ id: modelId, name: modelName });
+        } else {
+          // Uncheck if already 2 selected
+          checkbox.checked = false;
+        }
+      } else {
+        selectedModels = selectedModels.filter(m => m.id !== modelId);
+      }
+      updateCompareUI();
+    });
+  });
+
+  compareButton.addEventListener('click', () => {
+    if (selectedModels.length === 2) {
+      const [a, b] = selectedModels;
+      window.location.href = `/compare.html?a=${encodeURIComponent(a.id)}&b=${encodeURIComponent(b.id)}`;
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   initSortableHeaders();
   restoreSortState();
+  initCompareSelection();
 });

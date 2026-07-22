@@ -32,32 +32,217 @@
     <p>Explore leading models ranked across public benchmarks.</p>
     <section class="results-area" aria-labelledby="results-heading">
       <h2 id="results-heading">Results</h2>
-      <p class="results-count" aria-live="polite">Demo content will be added in m2.</p>
+      <p class="results-count" aria-live="polite">15 models from 5 public sources.</p>
       <div class="table-wrapper">
-        <table aria-label="Model ratings">
+        <table id="results-table" aria-label="Model ratings">
           <thead>
             <tr>
-              <th class="sortable" aria-sort="ascending" tabindex="0" role="button">Rank</th>
-              <th class="sortable" aria-sort="none" tabindex="0" role="button">Model</th>
-              <th class="sortable" aria-sort="none" tabindex="0" role="button">Provider</th>
-              <th class="sortable" aria-sort="none" tabindex="0" role="button">Score</th>
+              <th class="sortable col-rank" aria-sort="ascending" tabindex="0" role="button">Rank</th>
+              <th class="sortable col-model" aria-sort="none" tabindex="0" role="button">Model</th>
+              <th class="sortable col-provider" aria-sort="none" tabindex="0" role="button">Provider</th>
+              <th class="col-sources">Sources</th>
+              <th class="sortable col-score" aria-sort="none" tabindex="0" role="button">Score</th>
+              <th class="sortable col-context" aria-sort="none" tabindex="0" role="button">Context</th>
+              <th class="sortable col-price" aria-sort="none" tabindex="0" role="button">$/1M out</th>
+              <th class="sortable col-type" aria-sort="none" tabindex="0" role="button">Type</th>
+              <th class="sortable col-license" aria-sort="none" tabindex="0" role="button">License</th>
+              <th class="col-compare">Compare</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>1</td>
-              <td>Placeholder</td>
-              <td>—</td>
-              <td>—</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Claude Fable 5</a></td>
+              <td>Anthropic</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>93.9</td>
+              <td>1,048,576</td>
+              <td>$75.00</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="claude-fable-5" data-model-name="Claude Fable 5" aria-label="Select Claude Fable 5 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">GPT-5.6 Sol</a></td>
+              <td>OpenAI</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>90.7</td>
+              <td>1,114,112</td>
+              <td>$22.00</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="gpt-5-6-sol" data-model-name="GPT-5.6 Sol" aria-label="Select GPT-5.6 Sol for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Kimi K3</a></td>
+              <td>Moonshot AI</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>88.9</td>
+              <td>1,048,576</td>
+              <td>$15.00</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="kimi-k3" data-model-name="Kimi K3" aria-label="Select Kimi K3 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Claude Opus 4.8</a></td>
+              <td>Anthropic</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>88.5</td>
+              <td>1,048,576</td>
+              <td>$75.00</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="claude-opus-4-8" data-model-name="Claude Opus 4.8" aria-label="Select Claude Opus 4.8 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Claude Sonnet 5</a></td>
+              <td>Anthropic</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>86.2</td>
+              <td>1,048,576</td>
+              <td>$15.00</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="claude-sonnet-5" data-model-name="Claude Sonnet 5" aria-label="Select Claude Sonnet 5 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">GPT-5.5</a></td>
+              <td>OpenAI</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>84.6</td>
+              <td>1,048,576</td>
+              <td>$22.00</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="gpt-5-5" data-model-name="GPT-5.5" aria-label="Select GPT-5.5 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Gemini 3 Pro</a></td>
+              <td>Google</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>85.1</td>
+              <td>1,048,576</td>
+              <td>$21.00</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="gemini-3-pro" data-model-name="Gemini 3 Pro" aria-label="Select Gemini 3 Pro for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Grok 4</a></td>
+              <td>xAI</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>83.3</td>
+              <td>131,072</td>
+              <td>$10.00</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="grok-4" data-model-name="Grok 4" aria-label="Select Grok 4 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">DeepSeek V4</a></td>
+              <td>DeepSeek</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">Open LLM Leaderboard</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>82.4</td>
+              <td>1,048,576</td>
+              <td>$1.68</td>
+              <td><span class="badge badge--open">Open</span></td>
+              <td><span class="badge badge--mit">MIT</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="deepseek-v4" data-model-name="DeepSeek V4" aria-label="Select DeepSeek V4 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">GLM-5.2</a></td>
+              <td>Z.AI</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">Open LLM Leaderboard</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>80.6</td>
+              <td>1,048,576</td>
+              <td>$1.85</td>
+              <td><span class="badge badge--open">Open</span></td>
+              <td><span class="badge badge--mit">MIT</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="glm-5-2" data-model-name="GLM-5.2" aria-label="Select GLM-5.2 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Llama 4 70B</a></td>
+              <td>Meta</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">Open LLM Leaderboard</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>79.7</td>
+              <td>131,072</td>
+              <td>$2.40</td>
+              <td><span class="badge badge--open">Open</span></td>
+              <td><span class="badge badge--apache">Llama</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="llama-4-70b" data-model-name="Llama 4 70B" aria-label="Select Llama 4 70B for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Qwen3 Max</a></td>
+              <td>Alibaba</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>81.3</td>
+              <td>1,048,576</td>
+              <td>$4.60</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="qwen3-max" data-model-name="Qwen3 Max" aria-label="Select Qwen3 Max for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Command R+ v3</a></td>
+              <td>Cohere</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>75.9</td>
+              <td>262,144</td>
+              <td>$10.00</td>
+              <td><span class="badge badge--closed">Closed</span></td>
+              <td><span class="badge badge--proprietary">Proprietary</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="command-r-plus-v3" data-model-name="Command R+ v3" aria-label="Select Command R+ v3 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Mistral Large 3</a></td>
+              <td>Mistral</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">Open LLM Leaderboard</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>74.4</td>
+              <td>131,072</td>
+              <td>$6.00</td>
+              <td><span class="badge badge--open">Open</span></td>
+              <td><span class="badge badge--apache">Apache 2.0</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="mistral-large-3" data-model-name="Mistral Large 3" aria-label="Select Mistral Large 3 for comparison"></label></td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">Gemma 4 27B</a></td>
+              <td>Google</td>
+              <td><a href="https://lmarena.ai/" target="_blank" rel="noopener" class="source-link">LMArena</a>, <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="source-link">Artificial Analysis</a>, <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">Open LLM Leaderboard</a>, <a href="https://llm-stats.com/" target="_blank" rel="noopener" class="source-link">LLM Stats</a>, <a href="https://benchlm.ai/" target="_blank" rel="noopener" class="source-link">BenchLM</a></td>
+              <td>73.1</td>
+              <td>262,144</td>
+              <td>$1.00</td>
+              <td><span class="badge badge--open">Open</span></td>
+              <td><span class="badge badge--apache">Apache 2.0</span></td>
+              <td><label class="compare-control"><input type="checkbox" value="gemma-4-27b" data-model-name="Gemma 4 27B" aria-label="Select Gemma 4 27B for comparison"></label></td>
             </tr>
           </tbody>
         </table>
       </div>
+      <div class="compare-bar" id="compare-bar" hidden>
+        <button type="button" class="compare-button" id="compare-button" disabled>
+          <svg class="compare-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4h5v1H2V4zm0 3.5h5v1H2v-1zM2 11h5v1H2v-1zm7-7h5v1H9V4zm0 3.5h5v1H9v-1zm0 3.5h5v1H9v-1z" fill="currentColor"/></svg>
+          <span id="compare-button-text">Compare selected (0/2)</span>
+        </button>
+      </div>
       <noscript>
         <div class="noscript-content">
-          <p>JavaScript appears to be disabled. This page is still accessible.</p>
+          <p>JavaScript appears to be disabled. The table above still shows the latest model list and sources.</p>
           <ul>
-            <li><a href="/compare.html">Compare two models</a></li>
             <li><a href="/trends.html">Review benchmark trends</a></li>
             <li><a href="/sources.html">View source methodology</a></li>
           </ul>

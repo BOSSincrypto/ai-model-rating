@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Models snapshot",
   "type": "object",
   "required": [
@@ -123,8 +123,7 @@
           "minimum": 1
         },
         "updated_at": {
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "source_note": {
           "type": "string",

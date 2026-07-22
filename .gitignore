@@ -7,5 +7,7 @@ Thumbs.db
 dist/
 data/.schema-temp.json
 data/.data-temp.json
+data/.validate-data.log
 RELEASE_NOTES.md
 *.har
+lighthouse-report.json
