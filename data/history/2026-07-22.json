@@ -1,12 +1,5 @@
 {
   "snapshot_date": "2026-07-22",
-  "sources": [
-    "lmarena",
-    "aa",
-    "ollm",
-    "llmstats",
-    "benchlm"
-  ],
   "models": [
     {
       "id": "claude-fable-5",
