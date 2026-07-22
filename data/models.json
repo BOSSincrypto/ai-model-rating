@@ -1,6 +1,12 @@
 {
   "snapshot_date": "2026-07-20",
-  "sources": ["lmarena", "aa", "ollm", "llmstats", "benchlm"],
+  "sources": [
+    "lmarena",
+    "aa",
+    "ollm",
+    "llmstats",
+    "benchlm"
+  ],
   "models": [
     {
       "id": "claude-fable-5",
@@ -79,6 +85,25 @@
       "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
     },
     {
+      "id": "gemini-3-ultra",
+      "name": "Gemini 3 Ultra",
+      "provider": "Google",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 1048576,
+      "pricing": { "input_per_1m": 25.0, "output_per_1m": 75.0 },
+      "scores": {
+        "lmarena_elo": 1458,
+        "aa_intelligence": 72,
+        "ollm_avg": null,
+        "llmstats_composite": 86.9,
+        "benchlm_overall": 91.0
+      },
+      "rank": 5,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
+    },
+    {
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "provider": "Anthropic",
@@ -92,25 +117,6 @@
         "ollm_avg": null,
         "llmstats_composite": 86.2,
         "benchlm_overall": 90.0
-      },
-      "rank": 5,
-      "updated_at": "2026-07-20T00:00:00Z",
-      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
-    },
-    {
-      "id": "gpt-5-5",
-      "name": "GPT-5.5",
-      "provider": "OpenAI",
-      "type": "closed",
-      "license": "proprietary",
-      "context_window": 1048576,
-      "pricing": { "input_per_1m": 7.78, "output_per_1m": 22.0 },
-      "scores": {
-        "lmarena_elo": 1441,
-        "aa_intelligence": 70,
-        "ollm_avg": null,
-        "llmstats_composite": 84.6,
-        "benchlm_overall": 89.0
       },
       "rank": 6,
       "updated_at": "2026-07-20T00:00:00Z",
@@ -136,6 +142,25 @@
       "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
     },
     {
+      "id": "gpt-5-5",
+      "name": "GPT-5.5",
+      "provider": "OpenAI",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 1048576,
+      "pricing": { "input_per_1m": 7.78, "output_per_1m": 22.0 },
+      "scores": {
+        "lmarena_elo": 1441,
+        "aa_intelligence": 70,
+        "ollm_avg": null,
+        "llmstats_composite": 84.6,
+        "benchlm_overall": 89.0
+      },
+      "rank": 8,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
+    },
+    {
       "id": "grok-4",
       "name": "Grok 4",
       "provider": "xAI",
@@ -150,7 +175,7 @@
         "llmstats_composite": 83.3,
         "benchlm_overall": 87.0
       },
-      "rank": 8,
+      "rank": 9,
       "updated_at": "2026-07-20T00:00:00Z",
       "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
     },
@@ -169,47 +194,28 @@
         "llmstats_composite": 82.4,
         "benchlm_overall": 86.0
       },
-      "rank": 9,
-      "updated_at": "2026-07-20T00:00:00Z",
-      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
-    },
-    {
-      "id": "glm-5-2",
-      "name": "GLM-5.2",
-      "provider": "Z.AI",
-      "type": "open",
-      "license": "mit",
-      "context_window": 1048576,
-      "pricing": { "input_per_1m": 0.55, "output_per_1m": 1.85 },
-      "scores": {
-        "lmarena_elo": 1393,
-        "aa_intelligence": 66,
-        "ollm_avg": 90.1,
-        "llmstats_composite": 80.6,
-        "benchlm_overall": 85.0
-      },
       "rank": 10,
       "updated_at": "2026-07-20T00:00:00Z",
       "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
     },
     {
-      "id": "llama-4-70b",
-      "name": "Llama 4 70B",
-      "provider": "Meta",
-      "type": "open",
-      "license": "llama",
-      "context_window": 131072,
-      "pricing": { "input_per_1m": 0.8, "output_per_1m": 2.4 },
+      "id": "yi-lightning",
+      "name": "Yi-Lightning",
+      "provider": "01.AI",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 262144,
+      "pricing": { "input_per_1m": 0.68, "output_per_1m": 2.72 },
       "scores": {
-        "lmarena_elo": 1388,
-        "aa_intelligence": 65,
-        "ollm_avg": 89.4,
-        "llmstats_composite": 79.7,
-        "benchlm_overall": 84.0
+        "lmarena_elo": 1415,
+        "aa_intelligence": 67,
+        "ollm_avg": null,
+        "llmstats_composite": 82.0,
+        "benchlm_overall": 85.0
       },
       "rank": 11,
       "updated_at": "2026-07-20T00:00:00Z",
-      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
     },
     {
       "id": "qwen3-max",
@@ -231,6 +237,44 @@
       "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
     },
     {
+      "id": "glm-5-2",
+      "name": "GLM-5.2",
+      "provider": "Z.AI",
+      "type": "open",
+      "license": "mit",
+      "context_window": 1048576,
+      "pricing": { "input_per_1m": 0.55, "output_per_1m": 1.85 },
+      "scores": {
+        "lmarena_elo": 1393,
+        "aa_intelligence": 66,
+        "ollm_avg": 90.1,
+        "llmstats_composite": 80.6,
+        "benchlm_overall": 85.0
+      },
+      "rank": 13,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "llama-4-70b",
+      "name": "Llama 4 70B",
+      "provider": "Meta",
+      "type": "open",
+      "license": "llama",
+      "context_window": 131072,
+      "pricing": { "input_per_1m": 0.8, "output_per_1m": 2.4 },
+      "scores": {
+        "lmarena_elo": 1388,
+        "aa_intelligence": 65,
+        "ollm_avg": 89.4,
+        "llmstats_composite": 79.7,
+        "benchlm_overall": 84.0
+      },
+      "rank": 14,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
       "id": "command-r-plus-v3",
       "name": "Command R+ v3",
       "provider": "Cohere",
@@ -245,7 +289,7 @@
         "llmstats_composite": 75.9,
         "benchlm_overall": 78.0
       },
-      "rank": 13,
+      "rank": 15,
       "updated_at": "2026-07-20T00:00:00Z",
       "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
     },
@@ -264,7 +308,7 @@
         "llmstats_composite": 74.4,
         "benchlm_overall": 77.0
       },
-      "rank": 14,
+      "rank": 16,
       "updated_at": "2026-07-20T00:00:00Z",
       "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
     },
@@ -283,7 +327,292 @@
         "llmstats_composite": 73.1,
         "benchlm_overall": 76.0
       },
-      "rank": 15,
+      "rank": 17,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "qwen3-72b",
+      "name": "Qwen3 72B",
+      "provider": "Alibaba",
+      "type": "open",
+      "license": "apache-2.0",
+      "context_window": 131072,
+      "pricing": { "input_per_1m": 0.6, "output_per_1m": 1.8 },
+      "scores": {
+        "lmarena_elo": 1345,
+        "aa_intelligence": 61,
+        "ollm_avg": 88.2,
+        "llmstats_composite": 73.8,
+        "benchlm_overall": 77.0
+      },
+      "rank": 18,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "deepseek-v4-lite",
+      "name": "DeepSeek V4 Lite",
+      "provider": "DeepSeek",
+      "type": "open",
+      "license": "mit",
+      "context_window": 65536,
+      "pricing": { "input_per_1m": 0.15, "output_per_1m": 0.45 },
+      "scores": {
+        "lmarena_elo": 1327,
+        "aa_intelligence": 58,
+        "ollm_avg": 86.8,
+        "llmstats_composite": 71.5,
+        "benchlm_overall": 74.0
+      },
+      "rank": 19,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "gpt-5-1-mini",
+      "name": "GPT-5.1 Mini",
+      "provider": "OpenAI",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 524288,
+      "pricing": { "input_per_1m": 1.25, "output_per_1m": 5.0 },
+      "scores": {
+        "lmarena_elo": 1332,
+        "aa_intelligence": 59,
+        "ollm_avg": null,
+        "llmstats_composite": 72.2,
+        "benchlm_overall": 75.0
+      },
+      "rank": 20,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "gemini-3-flash",
+      "name": "Gemini 3 Flash",
+      "provider": "Google",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 524288,
+      "pricing": { "input_per_1m": 0.35, "output_per_1m": 1.05 },
+      "scores": {
+        "lmarena_elo": 1340,
+        "aa_intelligence": 60,
+        "ollm_avg": null,
+        "llmstats_composite": 73.4,
+        "benchlm_overall": 76.0
+      },
+      "rank": 21,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "llama-4-behemoth",
+      "name": "Llama 4 Behemoth",
+      "provider": "Meta",
+      "type": "open",
+      "license": "llama",
+      "context_window": 262144,
+      "pricing": { "input_per_1m": 1.2, "output_per_1m": 3.6 },
+      "scores": {
+        "lmarena_elo": 1320,
+        "aa_intelligence": 58,
+        "ollm_avg": 85.9,
+        "llmstats_composite": 70.8,
+        "benchlm_overall": 73.0
+      },
+      "rank": 22,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "claude-haiku-5",
+      "name": "Claude Haiku 5",
+      "provider": "Anthropic",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 524288,
+      "pricing": { "input_per_1m": 1.0, "output_per_1m": 5.0 },
+      "scores": {
+        "lmarena_elo": 1315,
+        "aa_intelligence": 57,
+        "ollm_avg": null,
+        "llmstats_composite": 70.2,
+        "benchlm_overall": 73.0
+      },
+      "rank": 23,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "amazon-nova-pro",
+      "name": "Amazon Nova Pro",
+      "provider": "Amazon",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 262144,
+      "pricing": { "input_per_1m": 1.6, "output_per_1m": 4.8 },
+      "scores": {
+        "lmarena_elo": 1308,
+        "aa_intelligence": 56,
+        "ollm_avg": null,
+        "llmstats_composite": 69.5,
+        "benchlm_overall": 72.0
+      },
+      "rank": 24,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "nemotron-4-ultra",
+      "name": "Nemotron 4 Ultra",
+      "provider": "NVIDIA",
+      "type": "open",
+      "license": "nvidia-open-model",
+      "context_window": 131072,
+      "pricing": { "input_per_1m": 0.75, "output_per_1m": 2.25 },
+      "scores": {
+        "lmarena_elo": 1302,
+        "aa_intelligence": 55,
+        "ollm_avg": 85.1,
+        "llmstats_composite": 68.8,
+        "benchlm_overall": 71.0
+      },
+      "rank": 25,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "phi-4-mini",
+      "name": "Phi-4 Mini",
+      "provider": "Microsoft",
+      "type": "open",
+      "license": "mit",
+      "context_window": 131072,
+      "pricing": { "input_per_1m": 0.15, "output_per_1m": 0.45 },
+      "scores": {
+        "lmarena_elo": 1291,
+        "aa_intelligence": 54,
+        "ollm_avg": 84.3,
+        "llmstats_composite": 67.4,
+        "benchlm_overall": 70.0
+      },
+      "rank": 26,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "mistral-small-3",
+      "name": "Mistral Small 3",
+      "provider": "Mistral",
+      "type": "open",
+      "license": "apache-2.0",
+      "context_window": 65536,
+      "pricing": { "input_per_1m": 0.5, "output_per_1m": 1.5 },
+      "scores": {
+        "lmarena_elo": 1280,
+        "aa_intelligence": 53,
+        "ollm_avg": 83.5,
+        "llmstats_composite": 66.2,
+        "benchlm_overall": 69.0
+      },
+      "rank": 27,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "command-a",
+      "name": "Command A",
+      "provider": "Cohere",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 262144,
+      "pricing": { "input_per_1m": 1.0, "output_per_1m": 4.0 },
+      "scores": {
+        "lmarena_elo": 1272,
+        "aa_intelligence": 52,
+        "ollm_avg": null,
+        "llmstats_composite": 65.1,
+        "benchlm_overall": 68.0
+      },
+      "rank": 28,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "granite-4",
+      "name": "Granite 4",
+      "provider": "IBM",
+      "type": "open",
+      "license": "apache-2.0",
+      "context_window": 131072,
+      "pricing": { "input_per_1m": 0.35, "output_per_1m": 1.05 },
+      "scores": {
+        "lmarena_elo": 1260,
+        "aa_intelligence": 51,
+        "ollm_avg": 82.6,
+        "llmstats_composite": 63.8,
+        "benchlm_overall": 66.0
+      },
+      "rank": 29,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "hunyuan-large",
+      "name": "Hunyuan Large",
+      "provider": "Tencent",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 262144,
+      "pricing": { "input_per_1m": 0.8, "output_per_1m": 2.4 },
+      "scores": {
+        "lmarena_elo": 1255,
+        "aa_intelligence": 50,
+        "ollm_avg": null,
+        "llmstats_composite": 62.9,
+        "benchlm_overall": 65.0
+      },
+      "rank": 30,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "reka-core",
+      "name": "Reka Core",
+      "provider": "Reka AI",
+      "type": "closed",
+      "license": "proprietary",
+      "context_window": 131072,
+      "pricing": { "input_per_1m": 0.5, "output_per_1m": 2.0 },
+      "scores": {
+        "lmarena_elo": 1248,
+        "aa_intelligence": 49,
+        "ollm_avg": null,
+        "llmstats_composite": 61.5,
+        "benchlm_overall": 64.0
+      },
+      "rank": 31,
+      "updated_at": "2026-07-20T00:00:00Z",
+      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; AI index, LLM Stats, and BenchLM scores from artificialanalysis.ai, llm-stats.com, and benchlm.ai dated 2026-07-20/2026-07-21."
+    },
+    {
+      "id": "stable-lm-3",
+      "name": "Stable LM 3",
+      "provider": "Stability AI",
+      "type": "open",
+      "license": "stability-ai",
+      "context_window": 65536,
+      "pricing": { "input_per_1m": 0.1, "output_per_1m": 0.3 },
+      "scores": {
+        "lmarena_elo": 1235,
+        "aa_intelligence": 48,
+        "ollm_avg": 81.2,
+        "llmstats_composite": 60.1,
+        "benchlm_overall": 62.0
+      },
+      "rank": 32,
       "updated_at": "2026-07-20T00:00:00Z",
       "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot; OLLM v2 average and BenchLM overall from huggingface.co/open-llm-leaderboard and benchlm.ai; AI index and LLM Stats from artificialanalysis.ai and llm-stats.com dated 2026-07-20/2026-07-21."
     }
