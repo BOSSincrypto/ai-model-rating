@@ -1,100 +1,20 @@
 {
   "snapshot_date": "2026-07-20",
   "models": [
-    {
-      "id": "claude-fable-5",
-      "name": "Claude Fable 5",
-      "provider": "Anthropic",
-      "type": "closed",
-      "license": "proprietary",
-      "context_window": 1048576,
-      "pricing": { "input_per_1m": 15.0, "output_per_1m": 75.0 },
-      "scores": {
-        "lmarena_elo": 1509,
-        "aa_intelligence": 78,
-        "ollm_avg": null,
-        "llmstats_composite": 92.4,
-        "benchlm_overall": 95.0
-      },
-      "rank": 1,
-      "updated_at": "2026-07-20T00:00:00Z",
-      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
-    },
-    {
-      "id": "gpt-5-6-sol",
-      "name": "GPT-5.6 Sol",
-      "provider": "OpenAI",
-      "type": "closed",
-      "license": "proprietary",
-      "context_window": 1114112,
-      "pricing": { "input_per_1m": 7.78, "output_per_1m": 22.0 },
-      "scores": {
-        "lmarena_elo": 1494,
-        "aa_intelligence": 76,
-        "ollm_avg": null,
-        "llmstats_composite": 90.7,
-        "benchlm_overall": 94.0
-      },
-      "rank": 2,
-      "updated_at": "2026-07-20T00:00:00Z",
-      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
-    },
-    {
-      "id": "kimi-k3",
-      "name": "Kimi K3",
-      "provider": "Moonshot AI",
-      "type": "closed",
-      "license": "proprietary",
-      "context_window": 1048576,
-      "pricing": { "input_per_1m": 3.0, "output_per_1m": 15.0 },
-      "scores": {
-        "lmarena_elo": 1472,
-        "aa_intelligence": 74,
-        "ollm_avg": null,
-        "llmstats_composite": 88.9,
-        "benchlm_overall": 93.0
-      },
-      "rank": 3,
-      "updated_at": "2026-07-20T00:00:00Z",
-      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
-    },
-    {
-      "id": "claude-opus-4-8",
-      "name": "Claude Opus 4.8",
-      "provider": "Anthropic",
-      "type": "closed",
-      "license": "proprietary",
-      "context_window": 1048576,
-      "pricing": { "input_per_1m": 15.0, "output_per_1m": 75.0 },
-      "scores": {
-        "lmarena_elo": 1468,
-        "aa_intelligence": 73,
-        "ollm_avg": null,
-        "llmstats_composite": 88.5,
-        "benchlm_overall": 92.0
-      },
-      "rank": 4,
-      "updated_at": "2026-07-20T00:00:00Z",
-      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
-    },
-    {
-      "id": "claude-sonnet-5",
-      "name": "Claude Sonnet 5",
-      "provider": "Anthropic",
-      "type": "closed",
-      "license": "proprietary",
-      "context_window": 1048576,
-      "pricing": { "input_per_1m": 3.0, "output_per_1m": 15.0 },
-      "scores": {
-        "lmarena_elo": 1452,
-        "aa_intelligence": 71,
-        "ollm_avg": null,
-        "llmstats_composite": 86.2,
-        "benchlm_overall": 90.0
-      },
-      "rank": 5,
-      "updated_at": "2026-07-20T00:00:00Z",
-      "source_note": "Elo per lmarena.ai leaderboard 2026-07-20 snapshot."
-    }
+    { "id": "claude-fable-5", "name": "Claude Fable 5", "provider": "Anthropic", "type": "closed", "license": "proprietary", "context_window": 1048576, "pricing": { "input_per_1m": 15.0, "output_per_1m": 75.0 }, "scores": { "lmarena_elo": 1509, "aa_intelligence": 78, "ollm_avg": null, "llmstats_composite": 92.4, "benchlm_overall": 95.0 }, "rank": 1, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "gpt-5-6-sol", "name": "GPT-5.6 Sol", "provider": "OpenAI", "type": "closed", "license": "proprietary", "context_window": 1114112, "pricing": { "input_per_1m": 7.78, "output_per_1m": 22.0 }, "scores": { "lmarena_elo": 1494, "aa_intelligence": 76, "ollm_avg": null, "llmstats_composite": 90.7, "benchlm_overall": 94.0 }, "rank": 2, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "kimi-k3", "name": "Kimi K3", "provider": "Moonshot AI", "type": "closed", "license": "proprietary", "context_window": 1048576, "pricing": { "input_per_1m": 3.0, "output_per_1m": 15.0 }, "scores": { "lmarena_elo": 1472, "aa_intelligence": 74, "ollm_avg": null, "llmstats_composite": 88.9, "benchlm_overall": 93.0 }, "rank": 3, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "claude-opus-4-8", "name": "Claude Opus 4.8", "provider": "Anthropic", "type": "closed", "license": "proprietary", "context_window": 1048576, "pricing": { "input_per_1m": 15.0, "output_per_1m": 75.0 }, "scores": { "lmarena_elo": 1468, "aa_intelligence": 73, "ollm_avg": null, "llmstats_composite": 88.5, "benchlm_overall": 92.0 }, "rank": 4, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "claude-sonnet-5", "name": "Claude Sonnet 5", "provider": "Anthropic", "type": "closed", "license": "proprietary", "context_window": 1048576, "pricing": { "input_per_1m": 3.0, "output_per_1m": 15.0 }, "scores": { "lmarena_elo": 1452, "aa_intelligence": 71, "ollm_avg": null, "llmstats_composite": 86.2, "benchlm_overall": 90.0 }, "rank": 5, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "gpt-5-5", "name": "GPT-5.5", "provider": "OpenAI", "type": "closed", "license": "proprietary", "context_window": 1048576, "pricing": { "input_per_1m": 7.78, "output_per_1m": 22.0 }, "scores": { "lmarena_elo": 1441, "aa_intelligence": 70, "ollm_avg": null, "llmstats_composite": 84.6, "benchlm_overall": 89.0 }, "rank": 6, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "gemini-3-pro", "name": "Gemini 3 Pro", "provider": "Google", "type": "closed", "license": "proprietary", "context_window": 1048576, "pricing": { "input_per_1m": 7.0, "output_per_1m": 21.0 }, "scores": { "lmarena_elo": 1448, "aa_intelligence": 69, "ollm_avg": null, "llmstats_composite": 85.1, "benchlm_overall": 88.0 }, "rank": 7, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "grok-4", "name": "Grok 4", "provider": "xAI", "type": "closed", "license": "proprietary", "context_window": 131072, "pricing": { "input_per_1m": 2.0, "output_per_1m": 10.0 }, "scores": { "lmarena_elo": 1429, "aa_intelligence": 67, "ollm_avg": null, "llmstats_composite": 83.3, "benchlm_overall": 87.0 }, "rank": 8, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "deepseek-v4", "name": "DeepSeek V4", "provider": "DeepSeek", "type": "open", "license": "mit", "context_window": 1048576, "pricing": { "input_per_1m": 0.56, "output_per_1m": 1.68 }, "scores": { "lmarena_elo": 1410, "aa_intelligence": 68, "ollm_avg": 91.7, "llmstats_composite": 82.4, "benchlm_overall": 86.0 }, "rank": 9, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "glm-5-2", "name": "GLM-5.2", "provider": "Z.AI", "type": "open", "license": "mit", "context_window": 1048576, "pricing": { "input_per_1m": 0.55, "output_per_1m": 1.85 }, "scores": { "lmarena_elo": 1393, "aa_intelligence": 66, "ollm_avg": 90.1, "llmstats_composite": 80.6, "benchlm_overall": 85.0 }, "rank": 10, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "llama-4-70b", "name": "Llama 4 70B", "provider": "Meta", "type": "open", "license": "llama", "context_window": 131072, "pricing": { "input_per_1m": 0.8, "output_per_1m": 2.4 }, "scores": { "lmarena_elo": 1388, "aa_intelligence": 65, "ollm_avg": 89.4, "llmstats_composite": 79.7, "benchlm_overall": 84.0 }, "rank": 11, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "qwen3-max", "name": "Qwen3 Max", "provider": "Alibaba", "type": "closed", "license": "proprietary", "context_window": 1048576, "pricing": { "input_per_1m": 1.53, "output_per_1m": 4.6 }, "scores": { "lmarena_elo": 1398, "aa_intelligence": 67, "ollm_avg": null, "llmstats_composite": 81.3, "benchlm_overall": 85.0 }, "rank": 12, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "command-r-plus-v3", "name": "Command R+ v3", "provider": "Cohere", "type": "closed", "license": "proprietary", "context_window": 262144, "pricing": { "input_per_1m": 2.5, "output_per_1m": 10.0 }, "scores": { "lmarena_elo": 1361, "aa_intelligence": 61, "ollm_avg": null, "llmstats_composite": 75.9, "benchlm_overall": 78.0 }, "rank": 13, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "mistral-large-3", "name": "Mistral Large 3", "provider": "Mistral", "type": "open", "license": "apache-2.0", "context_window": 131072, "pricing": { "input_per_1m": 2.0, "output_per_1m": 6.0 }, "scores": { "lmarena_elo": 1354, "aa_intelligence": 62, "ollm_avg": 88.6, "llmstats_composite": 74.4, "benchlm_overall": 77.0 }, "rank": 14, "updated_at": "2026-07-20T00:00:00Z" },
+    { "id": "gemma-4-27b", "name": "Gemma 4 27B", "provider": "Google", "type": "open", "license": "apache-2.0", "context_window": 262144, "pricing": { "input_per_1m": 0.25, "output_per_1m": 1.0 }, "scores": { "lmarena_elo": 1338, "aa_intelligence": 60, "ollm_avg": 87.9, "llmstats_composite": 73.1, "benchlm_overall": 76.0 }, "rank": 15, "updated_at": "2026-07-20T00:00:00Z" }
   ]
 }

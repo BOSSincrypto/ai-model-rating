@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trends - ai-model-rating</title>
-  <meta name="description" content="Trend views for LLM benchmark scores across recent snapshots.">
+  <meta name="description" content="Trend views for LLM benchmark scores across recent weekly snapshots with sparkline visualizations.">
   <link rel="canonical" href="https://ai-model-rating.bossincrypto.dev/trends.html">
   <meta property="og:title" content="Trends - ai-model-rating">
-  <meta property="og:description" content="Trend views for LLM benchmark scores across recent snapshots.">
+  <meta property="og:description" content="Trend views for LLM benchmark scores across recent weekly snapshots with sparkline visualizations.">
   <meta property="og:url" content="https://ai-model-rating.bossincrypto.dev/trends.html">
   <meta property="og:image" content="https://ai-model-rating.bossincrypto.dev/favicon.svg">
   <link rel="stylesheet" href="assets/css/tokens.css">
@@ -29,10 +29,57 @@
   </header>
   <main class="page-main">
     <h1>Trends</h1>
-    <p>Review how top models changed over recent benchmark snapshots.</p>
+    <p>Review how top models changed over recent benchmark snapshots. Sparklines show composite score trends across the latest weekly snapshots.</p>
+    <p id="trends-status" class="trends-status" aria-live="polite"></p>
+
+    <div id="trends-container" class="trends-container" hidden>
+      <!-- Table and sparklines rendered by trends.js -->
+    </div>
+
+    <div class="trends-note">
+      <p>Composite score is the average of available normalized benchmark scores (AA Intelligence, Open LLM avg, LLM Stats, BenchLM, and normalized LMArena Elo).</p>
+    </div>
+
     <noscript>
       <div class="noscript-content">
-        <p>JavaScript appears to be disabled. The latest available snapshot is still shown below.</p>
+        <p>JavaScript appears to be disabled. Below is the latest available snapshot data <strong>(2026-07-20)</strong> for the top 15 models.</p>
+      </div>
+      <div class="table-wrapper">
+        <table aria-label="Latest model snapshot (no-JS fallback)">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Model</th>
+              <th>Provider</th>
+              <th>LMArena Elo</th>
+              <th>AA Intel.</th>
+              <th>LLM Stats</th>
+              <th>BenchLM</th>
+              <th>Context</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Claude Fable 5</td><td>Anthropic</td><td>1509</td><td>78</td><td>92.4</td><td>95</td><td>1,048,576</td><td>$75.00</td></tr>
+            <tr><td>2</td><td>GPT-5.6 Sol</td><td>OpenAI</td><td>1494</td><td>76</td><td>90.7</td><td>94</td><td>1,114,112</td><td>$22.00</td></tr>
+            <tr><td>3</td><td>Kimi K3</td><td>Moonshot AI</td><td>1472</td><td>74</td><td>88.9</td><td>93</td><td>1,048,576</td><td>$15.00</td></tr>
+            <tr><td>4</td><td>Claude Opus 4.8</td><td>Anthropic</td><td>1468</td><td>73</td><td>88.5</td><td>92</td><td>1,048,576</td><td>$75.00</td></tr>
+            <tr><td>5</td><td>Claude Sonnet 5</td><td>Anthropic</td><td>1452</td><td>71</td><td>86.2</td><td>90</td><td>1,048,576</td><td>$15.00</td></tr>
+            <tr><td>6</td><td>GPT-5.5</td><td>OpenAI</td><td>1441</td><td>70</td><td>84.6</td><td>89</td><td>1,048,576</td><td>$22.00</td></tr>
+            <tr><td>7</td><td>Gemini 3 Pro</td><td>Google</td><td>1448</td><td>69</td><td>85.1</td><td>88</td><td>1,048,576</td><td>$21.00</td></tr>
+            <tr><td>8</td><td>Grok 4</td><td>xAI</td><td>1429</td><td>67</td><td>83.3</td><td>87</td><td>131,072</td><td>$10.00</td></tr>
+            <tr><td>9</td><td>DeepSeek V4</td><td>DeepSeek</td><td>1410</td><td>68</td><td>82.4</td><td>86</td><td>1,048,576</td><td>$1.68</td></tr>
+            <tr><td>10</td><td>GLM-5.2</td><td>Z.AI</td><td>1393</td><td>66</td><td>80.6</td><td>85</td><td>1,048,576</td><td>$1.85</td></tr>
+            <tr><td>11</td><td>Llama 4 70B</td><td>Meta</td><td>1388</td><td>65</td><td>79.7</td><td>84</td><td>131,072</td><td>$2.40</td></tr>
+            <tr><td>12</td><td>Qwen3 Max</td><td>Alibaba</td><td>1398</td><td>67</td><td>81.3</td><td>85</td><td>1,048,576</td><td>$4.60</td></tr>
+            <tr><td>13</td><td>Command R+ v3</td><td>Cohere</td><td>1361</td><td>61</td><td>75.9</td><td>78</td><td>262,144</td><td>$10.00</td></tr>
+            <tr><td>14</td><td>Mistral Large 3</td><td>Mistral</td><td>1354</td><td>62</td><td>74.4</td><td>77</td><td>131,072</td><td>$6.00</td></tr>
+            <tr><td>15</td><td>Gemma 4 27B</td><td>Google</td><td>1338</td><td>60</td><td>73.1</td><td>76</td><td>262,144</td><td>$1.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="noscript-content">
+        <p>Visit the <a href="/">Ratings page</a> to explore all models, or use the <a href="/compare.html">Compare page</a> to compare models side by side.</p>
       </div>
     </noscript>
   </main>
@@ -47,5 +94,6 @@
     </nav>
   </footer>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/trends.js" defer></script>
 </body>
 </html>
